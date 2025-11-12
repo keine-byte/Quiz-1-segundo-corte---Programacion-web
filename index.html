@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+    
+
+<body>
+    <div class="container">
+        <h1> Top Anime ONA</h1>
+        
+        <div class="selector-container">
+
+
+            <label for="animeSelect">Selecciona un anime:</label>
+            <select id="animeSelect">
+                <option value="">-- Seleccione un anime --</option>
+            </select>
+
+
+        </div>
+
+        <div class="table-container">
+            <table id="animeTable">
+                <thead>
+                    <tr>
+                        <th>Título en inglés</th>
+                        <th>Título en japonés</th>
+                        <th>Imagen</th>
+                        <th>Número de episodios</th>
+                        <th>Duración</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <tr>
+                        <td colspan="5" class="loading">Cargando datos...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="js/index.js"></script>
+
+    
+
+</body>
+</html>
