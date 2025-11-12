@@ -13,8 +13,6 @@ function adicionarTagABody(tag) {
     document.body.appendChild(tag);
 }
 
-// Usamos 'tagName' porque generaba un conflicto no se con que variable creo que era tag
-
 function crearTagConTexto(tagName, texto) {
     const tag = crearElemento(tagName);
     adicionarTextoATag(texto, tag);
@@ -43,7 +41,7 @@ function ObtenerAPI() {
         })
 
         .then(function (data) {
-            if (data && data.data) { // Asegurarse de que data.data existe
+            if (data && data.data) { 
                 animeData = data.data;
                 Combobox();
                 mostrarTodoAnime();
@@ -82,7 +80,7 @@ function mostrarTodoAnime() {
 }
 
 
-// Para crear una fila de la tabla
+// Para crear la fila de la tabla
 
 function crearFila(anime) {
 
