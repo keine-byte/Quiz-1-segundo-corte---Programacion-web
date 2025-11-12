@@ -124,10 +124,7 @@ document.getElementById('animeSeleccionado').addEventListener('change', function
     const tbody = document.getElementById('tablaBody');
     tbody.innerHTML = '';  
 
-    // Punto 3 del quiz para borrar los datos
-
-    // para seleccionar el anime
-
+    
     if (selectedIndex == '') {
         mostrarTodoAnime();
 
