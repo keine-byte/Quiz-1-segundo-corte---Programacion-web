@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Pagina que muestra los animes ONA mejor valorados utilizando la API de Jikan.">
+    <meta name="author" content="Keiner Elias Beltran Vergara">
+    <title>Pagina Principal</title>
 
     <link rel="stylesheet" href="css/style.css">
 
 
+
 </head>
-    
+
 
 <body>
+
+
     <div class="container">
         <h1> Top Anime ONA</h1>
-        
+
         <div class="selector-container">
 
 
-            <label for="animeSelect">Selecciona un anime:</label>
-            <select id="animeSelect">
+            <label for="animeSeleccionado">Selecciona un anime:</label>
+            <select id="animeSeleccionado">
                 <option value="">-- Seleccione un anime --</option>
             </select>
 
@@ -28,6 +34,7 @@
 
         <div class="table-container">
             <table id="animeTable">
+
                 <thead>
                     <tr>
                         <th>Título en inglés</th>
@@ -37,18 +44,23 @@
                         <th>Duración</th>
                     </tr>
                 </thead>
-                <tbody id="tableBody">
+
+                <tbody id="tablaBody">
                     <tr>
                         <td colspan="5" class="loading">Cargando datos...</td>
                     </tr>
                 </tbody>
+
             </table>
         </div>
+
+
     </div>
 
     <script src="js/index.js"></script>
 
-    
+
 
 </body>
+
 </html>
