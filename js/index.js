@@ -36,7 +36,7 @@ function crearImagen(src, alt) {
 
 let animeData = [];
 
-function loadAnimeData() {
+function ObtenerAPI() {
     fetch('https://api.jikan.moe/v4/top/anime?type=ona')
         .then(function (response) {
             return response.json();
@@ -73,13 +73,14 @@ function Combobox() {
 
 function mostrarTodoAnime() {
     const tbody = document.getElementById('tablaBody');
-    tbody.innerHTML = ''; // Limpiar la tablla antes de llenarla
+    tbody.innerHTML = ''; 
 
     animeData.forEach(function (anime) {
         const row = crearFila(anime);
         adicionarTagAContenedor(row, tbody);
     });
 }
+
 
 // Para crear una fila de la tabla
 
@@ -97,7 +98,7 @@ function crearFila(anime) {
 
     const img = crearImagen(imageUrl, anime.title || 'N/A');
 
-    img.className = 'anime-image';  //  Para ponerle el estilo
+    img.className = 'anime-image';  //  Para ponerle el estilo y que no se vea la imagen grande
 
     adicionarTagAContenedor(img, tdImage);
 
@@ -114,24 +115,22 @@ function crearFila(anime) {
     return row;
 }
 
+
+
 // Para filtrar por el nombre del anime
 
 document.getElementById('animeSeleccionado').addEventListener('change', function () {
     const selectedIndex = this.value;
     const tbody = document.getElementById('tablaBody');
-
-    // Borrar los datos de la tabla
     tbody.innerHTML = '';
 
     // para seleccionar el anime
 
     if (selectedIndex == '') {
-        // Si no hay selección (la opción "Mostrar todos"), mostrar todos los animes
         mostrarTodoAnime();
 
     } else {
 
-        // Mostrar únicamente el anime seleccionado
 
         const selectedAnime = animeData[selectedIndex];
         if (selectedAnime) {
@@ -141,5 +140,4 @@ document.getElementById('animeSeleccionado').addEventListener('change', function
     }
 });
 
-// Cargar los datos al iniciar la página asi es mas rapido 
-loadAnimeData();
+ObtenerAPI();
